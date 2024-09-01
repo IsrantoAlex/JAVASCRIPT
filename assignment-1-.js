@@ -1,6 +1,6 @@
 function Calculate(num1, num2, operation) {
     if (isNaN(num1) || isNaN(num2) || typeof operation !== 'string') {
-        return 'Invalid input. Please ensure num1 and num2 are numbers and operation is a string.';
+        return 'Invalid input. Please make sure num1 and num2 are numbers and operation is a string.';
     }
 
     
@@ -16,21 +16,21 @@ function Calculate(num1, num2, operation) {
             return num1 * num2;
         case 'divide':
             if (num2 === 0) {
-                return 'Error: Division by zero is not allowed.';
+                return 'Error: Division by zero is not allowed';
             }
             return num1 / num2;
         case 'modulus':
             return num1 % num2;
         default:
-            return 'Invalid operation. Please use add, subtract, multiply, divide, or modulus.';
+            return 'Invalid operation';
     }
 }
 
 
-let num1 = prompt("Enter the first number:");
-let num2 = prompt("Enter the second number:");
-let operation = prompt("Enter the operation (add, subtract, multiply, divide, modulus):");
+let num1 = prompt("Enter your first number:");
+let num2 = prompt("Enter your second number:");
+let operation = prompt("Enter the operation: add, subtract, multiply, divide or modulus:");
 
 
 let result = Calculate(num1, num2, operation);
-alert("Result: " + result);
+alert(  result);
