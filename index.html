@@ -4,10 +4,143 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    
+}
+
+.numbers {
+    margin-bottom: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: grid;
+}
+
+.number-btn {
+    font-size: 1.5em;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    background-color: #DA0368;
+    color: white;
+    border-radius: 10px;
+}
+
+.display {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 400px;
+}
+
+.guess {
+    margin: 10px 0;
+}
+
+button {
+    font-size: 1em;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+    background-color: #820263;
+    color: white;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+button#play-again, button#play-again-lose {
+    margin-top: 20px;
+}
+#enter-btn{
+    grid-column: 3/5;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    height: 50px;
+}
+.divv{
+    background-color: black;
+    height: 100px;
+    width: 100px;
+}
+    </style>
 </head>
 <body>
-    Say Hello to Js.
-    <script src="/assignment-1-.js"></script>
-     <!-- <script src="/gpt.js"></script> -->
+    <div class="container">
+        <div class="display">
+            <div id="user-guess" class="guess">
+                <div class="divv"></div>User  </div>
+            <div id="computer-guess" class="guess">
+                <div class="divv"></div>Computer  </div>
+        </div>
+        <div class="numbers">
+            <button class="number-btn">0</button>
+            <button class="number-btn">1</button>
+            <button class="number-btn">2</button>
+            <button class="number-btn">3</button>
+            <button class="number-btn">4</button>
+            <button class="number-btn">5</button>
+            <button class="number-btn">6</button>
+            <button class="number-btn">7</button>
+            <button class="number-btn">8</button>
+            <button class="number-btn">9</button>
+            <button id="enter-btn">Enter</button>
+        </div>
+        
+    </div>
+
+    
+    <div id="win-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="win-close">&times;</span>
+            <h2> Congratulations You Won!</h2>
+            <button id="play-again">Let's Play Again</button>
+        </div>
+    </div>
+
+    <div id="lose-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="lose-close">&times;</span>
+            <h2>Ooops! You Lost!</h2>
+            <button id="play-again-lose">Let's Play Again</button>
+        </div>
+    </div>
+
+    <script src="/gtpCodes.js"></script>
 </body>
 </html>

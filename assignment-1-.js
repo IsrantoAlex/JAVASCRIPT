@@ -33,4 +33,4 @@ let operation = prompt("Enter the operation: add, subtract, multiply, divide or 
 
 
 let result = Calculate(num1, num2, operation);
-alert(  result);
+alert( result );

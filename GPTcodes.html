@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+    <link rel="stylesheet" href="stylez.css">
+</head>
+<body>
+    <div class="container">
+        <div class="numbers">
+            <button class="number-btn">0</button>
+            <button class="number-btn">1</button>
+            <button class="number-btn">2</button>
+            <button class="number-btn">3</button>
+            <button class="number-btn">4</button>
+            <button class="number-btn">5</button>
+            <button class="number-btn">6</button>
+            <button class="number-btn">7</button>
+            <button class="number-btn">8</button>
+            <button class="number-btn">9</button>
+        </div>
+        <div class="display">
+            <div id="user-guess" class="guess">User Guess: </div>
+            <div id="computer-guess" class="guess">Computer Guess: </div>
+        </div>
+        <button id="enter-btn">Enter</button>
+    </div>
+
+    <!-- Modals -->
+    <div id="win-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="win-close">&times;</span>
+            <h2>You Won!</h2>
+            <button id="play-again">Let's Play Again</button>
+        </div>
+    </div>
+
+    <div id="lose-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="lose-close">&times;</span>
+            <h2>You Lost!</h2>
+            <button id="play-again-lose">Let's Play Again</button>
+        </div>
+    </div>
+
+    <script src="/gtpCodes.js"></script>
+</body>
+</html>
